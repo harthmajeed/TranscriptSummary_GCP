@@ -133,7 +133,7 @@ def greet():
     for dict in data:
         text_transcript += dict['text'] + ' '
     
-    text_summarization = summarize_text(text_transcript, 0.05)
+    #text_summarization = summarize_text(text_transcript, 0.05)
 
     text_summarization_nltk = summarize_text_nltk(text_transcript)
 
@@ -154,7 +154,7 @@ def greet():
 
     return render_template('output.html', 
         transcript=text_transcript, 
-        text_sum=text_summarization, 
+        text_sum='text_summarization', 
         text_sum_nltk=text_summarization_nltk,
         text_sum_nltk_2=text_summarization_nltk_2)
 
